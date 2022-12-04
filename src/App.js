@@ -26,9 +26,9 @@ function App() {
   
   return (
     <Flex h={'100vh'} bgColor='blackAlpha.800' justifyContent='center' alignItems='center'>
-    <Box color='white' h='90%' w='50%' border='2px solid grey' display='flex' justifyContent='center' alignItems='center' borderRadius='10px' >
-      <Flex flexDir='column' h='80%' w='80%'  alignItems='center' overflow='auto'>
-        {comments?.map( comment => <Comment children={childComments} id={comment.id} date={comment.date} comment={comment.comment} author={comment.author}></Comment>)}
+    <Box padding='5rem 0' color='white' h='90%' w='90%' border='2px solid grey' display='flex' justifyContent='center'  borderRadius='10px' overflow='auto'>
+      <Flex flexDir='column' h='max-content' w='90%'  alignItems='center' overflow='auto'>
+        {comments?.map( comment => <Comment upvote={comment.upvote} children={childComments} id={comment.id} date={comment.date} comment={comment.comment} author={comment.author}></Comment>)}
      
       </Flex>
     </Box>
